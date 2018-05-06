@@ -1,0 +1,54 @@
+@import url(https://fonts.googleapis.com/css?family=VT323);
+body {
+  font-family: 'VT323';
+  background-color: #404040;
+  color: #fdfef9;
+  padding: 0 1em;
+  font-size: 2em;
+}
+
+h1, h2, h3, p {
+  margin: 0.5em 0;
+  font-weight: normal;
+}
+
+.coins {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.coin {
+  border: 5px solid #266c8e;
+  background-color: #3aa0d0;
+  margin: 0.5em;
+  padding: 0 1.5em;
+}
+.coin .header {
+  text-align: center;
+}
+
+.coin-pic {
+  display: block;
+  margin: 0 auto;
+  width: 75px;
+}
+
+.buttons {
+  text-align: center;
+  margin-bottom: 0.5em;
+}
+
+button {
+  font-family: 'VT323';
+  border: 4px solid black;
+  padding: 0.25em;
+  font-size: 1em;
+  font-weight: bold;
+}
+button:hover {
+  cursor: pointer;
+}
+button:active {
+  color: white;
+  background-color: black;
+}

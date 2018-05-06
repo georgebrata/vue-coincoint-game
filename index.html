@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Coin Counter</title>
+  
+  
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  
+<div id="vue-app">
+  <h1>Coin Counter</h1>
+  <h2>You have {{ total | usd }}</h2>
+  <div class="coins">
+    <coin v-for="coin in coins" :name="coin.name" :value="coin.value" :quantity="coin.quantity" :pic="coin.pic" @increase="coin.quantity++" @decrease="(coin.quantity&gt;0)? coin.quantity-- : 0"></coin>
+  </div>
+</div>
+<script id="coin-template" type="text/x-template">
+  <div class="coin">
+    <h3 class="header">{{name}}</h3><img class="coin-pic" :src="pic"/>
+    <p>Worth: {{value}}</p>
+    <p>Quantity: {{quantity}}</p>
+    <div class="buttons">
+      <button type="button" @click="decrease">-1</button>
+      <button type="button" @click="increase">+1</button>
+    </div>
+  </div>
+</script>
+<!-- Sweet coin pics courtesy Mazeo-->
+<!-- https://openclipart.org/user-detail/mazeo-->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.min.js'></script>
+
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>
